@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "txt_counter": {
+      "command": "python",
+      "args": [
+        "../servers/txt_counter.py" 
+      ]
+    },
+    "webget": {
+      "command": "python",
+      "args": [
+        "../servers/webget.py" 
+      ]
+    }
+  }
+}

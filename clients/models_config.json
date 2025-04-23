@@ -1,0 +1,60 @@
+{
+  "models": {
+    "qwen-max": {
+      "display_name": "阿里千问-Max",
+      "base_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+      "provider": "aliyun",
+      "description": "阿里云千问Max模型，性能最强",
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "max_tokens": 2000,
+        "result_format": "message"
+      }
+    },
+    "qwen-plus": {
+      "display_name": "阿里千问-Plus",
+      "base_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+      "provider": "aliyun",
+      "description": "阿里云千问Plus模型，性能与价格的平衡选择",
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "max_tokens": 2000,
+        "result_format": "message"
+      }
+    },
+    "qwen-turbo": {
+      "display_name": "阿里千问-Turbo",
+      "base_url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+      "provider": "aliyun",
+      "description": "阿里云千问Turbo模型，响应速度快",
+      "default_parameters": {
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "max_tokens": 1500,
+        "result_format": "message"
+      }
+    }
+  },
+  "default_model": "qwen-max",
+  "providers": {
+    "aliyun": {
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer {api_key}",
+        "X-DashScope-SSE": "disable"
+      },
+      "request_format": {
+        "model": "{model_id}",
+        "input": {
+          "messages": "{messages}"
+        },
+        "parameters": "{parameters}"
+      },
+      "response_format": {
+        "content_path": "output.choices[0].message.content"
+      }
+    }
+  }
+}
