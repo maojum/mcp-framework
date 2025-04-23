@@ -15,7 +15,7 @@
 
 ## 界面展示
 
-![ui](clients\ui.png)
+![ui](clients/ui.png)
 
 ## 拓展mcp工具
 
