@@ -15,7 +15,7 @@
 
 ## 界面展示
 
-![image-20250423163845244](C:\Users\maojum\AppData\Roaming\Typora\typora-user-images\image-20250423163845244.png)
+![ui](clients\ui.png)
 
 ## 拓展mcp工具
 
